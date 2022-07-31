@@ -1,21 +1,12 @@
+import Image from "next/image";
+import styles from "../styles/Contacto.module.css";
+import Layout from "../components/Layout"
 
-import Banner from '../components/Banner'
-import Layout from '../components/Layout'
-import Listado from '../components/Listado'
-import Image from 'next/image'
-import styles from '../styles/Contacto.module.css'
-export default function Home({producto}) {
-  return (
-    
-      <Layout 
-        pagina='inicio'
-        >
-        <main className='contenedor'>
-          <h2 className='heading'>Nuestra Coleccion</h2>
-          <Listado productos={producto}/>
-        </main>
-        <Banner/>
-        <section className='contenedor'>
+const Contacto = () => {
+    return (
+
+        <Layout pagina="Contacto">
+            <main className='contenedor'>
               <h2 className='heading'>Contacto</h2>
               <section className={styles.seccion}>
                 <article>
@@ -46,22 +37,9 @@ export default function Home({producto}) {
                 </article>  
 
               </section>
-            </section>
-      </Layout>
-
-    
-  )
-
-}
-export async function getServerSideProps(){
-
-  const url = `${process.env.API_URL}/api/product`
-  const respuesta = await fetch(url)
-  const {producto} = await respuesta.json()
-
-  return {
-      props:{
-          producto
-      }
+            </main>
+        </Layout>
+    )
   }
-}
+  
+  export default Contacto

@@ -1,0 +1,45 @@
+.header{
+    padding: 1rem;
+    background-color: var(--primary);
+}
+
+.barra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    color:var(--negro)
+}
+.menuLink{
+    display: none;
+}
+.menuBars{
+    display: block;
+}
+@media (min-width:1024px){
+    .menuLink{
+        display: flex;
+        gap: 2rem;
+    }
+    .menuLink a{
+        color: var(--negro);
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 700;
+        padding: 1rem;
+        transition-property: background-color;
+        transition-duration: .2s;
+    }
+    .menuLink a:hover{
+        background-color: var(--secondary);
+        color:var(--blanco);
+        border-radius: 2px;
+    }
+    .menuBars{
+        display: none;
+    }
+    .menuBars img{
+        border-color: aliceblue;
+    }
+}
