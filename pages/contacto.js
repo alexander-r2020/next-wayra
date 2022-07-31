@@ -33,7 +33,7 @@ const Contacto = () => {
                   </div>
                 </article>
                 <article>
-                  <Image layout="responsive" width={320} height={250} src="/img/mapa.png" alt="google map wayra"/>
+                  <Image layout="responsive" width={320} height={250} src="/img/mapa-google.jpg" alt="google map wayra"/>
                 </article>  
 
               </section>
